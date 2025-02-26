@@ -1,0 +1,614 @@
+:root {
+  --blue: #68fcca;
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #efefef;
+  --dark-gray: #5f6567;
+  --navy: #6699cc;
+  --navy-trans: #6699cc59;
+  --btn-dark: #3d3d3d;
+  --transition: all ease 300ms;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* div {
+  border: solid 1px red;
+  padding: 2px;
+  margin: 1px;
+} */
+
+/* _______________________________________ */
+/* HEADER STYLES */
+/* _______________________________________ */
+.header-wrapper {
+  padding: 0 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  width: 175px;
+  object-fit: contain;
+  margin-left: -10px;
+  display: block;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-item {
+  width: min-content;
+}
+
+.nav-font {
+  color: var(--black);
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  display: block;
+  width: 100%;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* _______________________________________ */
+/* BACKGROUND STYLES */
+/* _______________________________________ */
+.background-blue {
+  background-color: var(--blue);
+}
+
+.background-gray {
+  background-color: var(--gray);
+}
+
+.background-navy {
+  background-color: var(--navy);
+}
+
+/* _______________________________________ */
+/* CONTAINERS STYLES */
+/* _______________________________________ */
+.container {
+  padding: 50px 30px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.pad-top {
+  padding-top: 40px;
+}
+
+.flex {
+  display: flex;
+  gap: 20px;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-content-spacebetween {
+  justify-content: space-between;
+}
+
+.flex-items-center {
+  align-items: center;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+/* _______________________________________ */
+/* BUTTONS STYLES */
+/* _______________________________________ */
+.button {
+  padding: 13px 33px;
+  background-color: var(--btn-dark);
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  text-decoration: none;
+  color: var(--white);
+  border: none;
+  border-radius: 100px 100px 100px 100px;
+  transition: var(--transition);
+  display: block;
+  width: fit-content;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: var(--black);
+}
+
+.button-underline {
+  display: block;
+  color: var(--black);
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1px;
+  text-decoration: none;
+  color: var(--black);
+  width: fit-content;
+  margin: 0;
+  border-bottom: 9px solid var(--blue);
+  transition: var(--transition);
+}
+
+.button-underline:hover {
+  cursor: pointer;
+  transform: translate(0, -7px);
+}
+
+.icon a img {
+  transition: var(--transition);
+  display: block;
+}
+
+.icon a img:hover {
+  cursor: pointer;
+  transform: translate(0, -7px);
+}
+
+/* _______________________________________ */
+/* FONTS STYLES */
+/* _______________________________________ */
+/* .plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+} */
+.h1-font {
+  color: var(--black);
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  display: block;
+  width: fit-content;
+  margin: 0;
+}
+
+.h2-font {
+  color: var(--black);
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 16px;
+  display: block;
+  width: fit-content;
+  margin: 0;
+}
+
+.h6-font {
+  color: var(--black);
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  display: block;
+  width: fit-content;
+  margin: 0;
+}
+
+.text {
+  color: var(--black);
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  display: block;
+  width: fit-content;
+  margin: 0;
+}
+
+.navy-underline {
+  border-bottom: 20px solid var(--navy-trans);
+}
+
+.loop-title {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  color: var(--white);
+  width: 100%;
+  background-color: #00000026;
+  padding: 20px;
+}
+
+.font-color-white {
+  color: var(--white);
+}
+
+/* _______________________________________ */
+/* CAROUSEL STYLES */
+/* _______________________________________ */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slides-wrapper {
+  /* overflow: hidden; */
+  display: flex;
+  gap: 0;
+  /* width: fit-content; */
+  transition: transform 0.5s ease-in-out;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.carousel-box {
+  display: flex;
+  flex-direction: column;
+  /* flex-shrink: 0; */
+  gap: 50px;
+  min-width: 100%;
+  padding: 0 35px;
+  /* transition: transform 0.5s ease-in-out; */
+}
+
+.carousel-col-first {
+  width: calc(55% - 20px);
+}
+
+.carousel-col-sec {
+  width: calc(45% - 20px);
+}
+
+.carousel-img {
+  width: 40vw;
+  max-height: 65vh;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+}
+
+.carousel-container {
+  padding: 0 30px;
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-container-grad {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 95%
+  );
+  position: relative;
+  padding: 30px 60px;
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.text-carousel {
+  color: var(--dark-gray);
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  display: block;
+  width: fit-content;
+  margin: 0;
+}
+
+.small-text-carousel {
+  color: var(--black);
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  display: block;
+  width: fit-content;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.carousel-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: -20px;
+}
+
+.carousel-legal-font {
+  color: var(--dark-gray);
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  display: block;
+  width: fit-content;
+  margin: 0;
+}
+
+.carousel-prev,
+.carousel-next {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: var(--black);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+}
+
+.carousel-prev {
+  left: 0px;
+}
+.carousel-next {
+  right: 0px;
+}
+
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.carousel-dot {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  width: 20px;
+  height: 6px;
+  background-color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* _______________________________________ */
+/* GRID STYLES */
+/* _______________________________________ */
+.container-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.grid-item {
+  width: calc(50% - 20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-item-img {
+  height: 345px;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+  display: block;
+}
+
+/* _______________________________________ */
+/* FOOTER STYLES */
+/* _______________________________________ */
+.footer-wrapper {
+  padding-bottom: 20px;
+}
+
+.footer-gap {
+  gap: 60px;
+}
+
+.footer-first-1 {
+  width: calc(45% - 30px);
+}
+
+.footer-first-2 {
+  width: calc(55% - 30px);
+}
+
+.footer-logo-img {
+  width: 250px;
+  object-fit: contain;
+  object-position: left;
+}
+
+.footer-logo-wrapper {
+  padding-bottom: 20px;
+}
+
+.footer-desc-box {
+  width: calc(50% - 10px);
+}
+
+.footer-desc-box p {
+  margin-bottom: 15px;
+}
+
+.footer-desc-box p a {
+  text-decoration: underline;
+}
+
+/* _______________________________________ */
+/* FORM STYLES */
+/* _______________________________________ */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: 15px;
+}
+
+.form-input {
+  border: none;
+  border-radius: 0;
+  outline: none;
+  margin: 5px 0;
+  padding: 15px;
+  border-bottom: 1px solid var(--white);
+}
+
+.form-input:focus {
+  border-bottom: 1px solid var(--black);
+}
+
+.form-button {
+  margin-top: 10px;
+  width: fit-content;
+}
+
+/* _______________________________________ */
+/* QUIZ STYLES */
+/* _______________________________________ */
+.quiz-title {
+  color: var(--white);
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 42px;
+  display: block;
+  margin: 0;
+}
+
+.quiz-section {
+  text-align: center;
+  background-color: #6699cc;
+  color: white;
+  padding: 60px 20px;
+}
+
+.quiz-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.quiz-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: none;
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+}
+
+.quiz-container h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.quiz-options button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quiz-options button:hover {
+  background: white;
+  color: #6699cc;
+  /*border-color: #6699CC;*/
+  border-radius: 50px;
+  border: 2px solid white;
+}
+
+.quiz-result {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.quiz-result button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: white;
+  color: #6699cc;
+  border: 2px solid #6699cc;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.quiz-result button:hover {
+  background-color: #6699cc;
+  color: white;
+  border: 2px solid #6699cc;
+}
+
+.quiz-question {
+  margin-bottom: 20px;
+}
