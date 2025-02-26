@@ -48,6 +48,38 @@
         </button>
       </div> -->
 
+      <div class="mobile-header">
+        <a href="#">
+          <img
+            decoding="async"
+            width="312"
+            height="120"
+            src="img/Screenshot-2025-01-13-at-22.03.05.png"
+            class="header-logo"
+            alt="Dentosept"
+          />
+        </a>
+
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
       <div class="header-wrapper">
         <a href="#">
           <img
@@ -98,10 +130,9 @@
                     stanów zapalnych gardła oraz jamy ustnej, a także pomocniczo
                     przy paradontozie. W aptekach dostępny jest bez recepty.
                   </p>
-                  <p style="height: 10px"></p>
                   <a href="#" class="button">Znajdź dentosept dla siebie</a>
                 </div>
-                <div class="carousel-col-sec"></div>
+                <div class="carousel-col-sec empty-box"></div>
               </div>
               <div class="flex carousel-container-grad">
                 <div class="carousel-col-first">
@@ -175,10 +206,9 @@
                     stanów zapalnych gardła oraz jamy ustnej, a także pomocniczo
                     przy paradontozie. W aptekach dostępny jest bez recepty.
                   </p>
-                  <p style="height: 10px"></p>
                   <a href="#" class="button">Znajdź dentosept dla siebie</a>
                 </div>
-                <div class="carousel-col-sec"></div>
+                <div class="carousel-col-sec empty-box"></div>
               </div>
               <div class="flex carousel-container-grad">
                 <div class="carousel-col-first">
@@ -252,10 +282,9 @@
                     stanów zapalnych gardła oraz jamy ustnej, a także pomocniczo
                     przy paradontozie. W aptekach dostępny jest bez recepty.
                   </p>
-                  <p style="height: 10px"></p>
                   <a href="#" class="button">Znajdź dentosept dla siebie</a>
                 </div>
-                <div class="carousel-col-sec"></div>
+                <div class="carousel-col-sec empty-box"></div>
               </div>
               <div class="flex carousel-container-grad">
                 <div class="carousel-col-first">
@@ -329,10 +358,9 @@
                     stanów zapalnych gardła oraz jamy ustnej, a także pomocniczo
                     przy paradontozie. W aptekach dostępny jest bez recepty.
                   </p>
-                  <p style="height: 10px"></p>
                   <a href="#" class="button">Znajdź dentosept dla siebie</a>
                 </div>
-                <div class="carousel-col-sec"></div>
+                <div class="carousel-col-sec empty-box"></div>
               </div>
               <div class="flex carousel-container-grad">
                 <div class="carousel-col-first">
@@ -406,10 +434,9 @@
                     stanów zapalnych gardła oraz jamy ustnej, a także pomocniczo
                     przy paradontozie. W aptekach dostępny jest bez recepty.
                   </p>
-                  <p style="height: 10px"></p>
                   <a href="#" class="button">Znajdź dentosept dla siebie</a>
                 </div>
-                <div class="carousel-col-sec"></div>
+                <div class="carousel-col-sec empty-box"></div>
               </div>
               <div class="flex carousel-container-grad">
                 <div class="carousel-col-first">
@@ -479,7 +506,7 @@
 
       <div class="container background-gray">
         <div
-          class="flex flex-row flex-content-spacebetween flex-items-center pad-top"
+          class="flex flex-row flex-content-spacebetween flex-items-center grid-title-box"
         >
           <h2 class="h2-font navy-underline">Najnowsze artykuły</h2>
           <a href="#" class="button-underline">Dowiedz się więcej</a>
@@ -659,11 +686,48 @@
             </a>
           </span>
         </div>
-        <div class="footer-first-2"></div>
+        <div class="footer-first-2 empty-box"></div>
       </div>
     </footer>
 
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li class="list-item">
+          <a href="#" class="nav-font">Dentosept®</a>
+        </li>
+        <li class="list-item">
+          <a href="#" class="nav-font">Dentosept A®</a>
+        </li>
+        <li class="list-item">
+          <a href="#" class="nav-font">Dentosept® FAST</a>
+        </li>
+        <li class="list-item">
+          <a href="#" class="nav-font">Dentosept® COMPLEX</a>
+        </li>
+        <li class="list-item">
+          <a href="#" class="nav-font">Dentosept A® MINI</a>
+        </li>
+      </ul>
+    </div>
+
     <script defer src="js/carousel.js"></script>
     <script defer src="js/quiz.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
