@@ -729,21 +729,33 @@ a {
 
 .quiz-options button {
   background: none;
+  text-align: left;
   border: 2px solid white;
   color: white;
   font-size: 18px;
-  padding: 15px;
+  padding: 5px 15px;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition);
 }
 
 .quiz-options button:hover {
   background: white;
   color: #6699cc;
-  /*border-color: #6699CC;*/
+  /* border-color: #6699CC; */
   border-radius: 50px;
   border: 2px solid white;
+  /* transform: translate(0, -7px); */
+}
+
+.quiz-options button:hover .quiz-icon {
+  background-color: #6699cc;
 }
 
 .quiz-result {
@@ -772,6 +784,14 @@ a {
 
 .quiz-question {
   margin-bottom: 20px;
+}
+
+.quiz-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 5px;
+  transition: var(--transition);
 }
 
 @media screen and (max-width: 767px) {
