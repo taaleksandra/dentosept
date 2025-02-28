@@ -794,6 +794,33 @@ a {
   transition: var(--transition);
 }
 
+.quiz-back {
+  display: block;
+  margin-right: auto;
+  margin-left: 5px;
+}
+.quiz-back,
+.quiz-restart {
+  background: none;
+  text-align: center;
+  border: 2px solid white;
+  color: white;
+  font-size: 18px;
+  padding: 5px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 40px;
+}
+
+.quiz-back:hover,
+.quiz-restart:hover {
+  background: white;
+  color: #6699cc;
+  border-radius: 50px;
+  border: 2px solid white;
+}
+
 @media screen and (max-width: 767px) {
   .quiz-options {
     grid-template-columns: repeat(1, 1fr);

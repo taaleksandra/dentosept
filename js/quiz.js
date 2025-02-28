@@ -291,6 +291,9 @@ const productLinks = {
 document.addEventListener("DOMContentLoaded", () => {
   const quizContainer = document.getElementById("quiz");
   const resultContainer = document.getElementById("result");
+  const quizContainerBtnback = document.querySelector(".quiz-container");
+
+  let history = []; // Historia wyborów
 
   function showStep(stepData) {
     quizContainer.innerHTML = "";
@@ -320,8 +323,10 @@ document.addEventListener("DOMContentLoaded", () => {
       textSpan.innerText = option.text;
       button.appendChild(textSpan);
 
+      // Obsługa kliknięcia
       button.addEventListener("click", () => {
         if (option.next) {
+          history.push(stepData); // Zapisujemy obecne pytanie w historii
           showStep(option.next[0]);
         } else {
           showResult(option);
@@ -329,6 +334,24 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       optionsContainer.appendChild(button);
     });
+
+    // *** USUWANIE STARYCH PRZYCISKÓW WSTECZ ***
+    const existingBackButton = document.querySelector(".quiz-back");
+    if (existingBackButton) {
+      existingBackButton.remove();
+    }
+
+    // Jeśli mamy historię, dodajemy przycisk "Wstecz"
+    if (history.length > 0) {
+      const backButton = document.createElement("button");
+      backButton.innerHTML = "&larr; Wróć";
+      backButton.className = "quiz-back";
+      backButton.addEventListener("click", () => {
+        const previousStep = history.pop(); // Cofamy się do poprzedniego pytania
+        showStep(previousStep);
+      });
+      quizContainerBtnback.appendChild(backButton);
+    }
 
     quizContainer.appendChild(question);
     quizContainer.appendChild(optionsContainer);
@@ -346,6 +369,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     resultContainer.appendChild(linkButton);
+
+    // *** USUWANIE STAREGO PRZYCISKU WSTECZ ***
+    const existingBackButton = document.querySelector(".quiz-back");
+    if (existingBackButton) {
+      existingBackButton.remove();
+    }
+
+    // Dodajemy opcję powrotu do poczatku quizu
+    const restartButton = document.createElement("button");
+    restartButton.innerHTML = "Wypełnij ponownie";
+    restartButton.className = "quiz-restart";
+    restartButton.addEventListener("click", () => {
+      history = []; // Resetujemy historię
+      resultContainer.style.display = "none";
+      quizContainer.style.display = "block";
+      showStep(quizData[0]); // Wracamy na początek quizu
+      const existingRestartButton = document.querySelector(".quiz-restart");
+      if (existingRestartButton) {
+        existingRestartButton.remove();
+      }
+    });
+
+    quizContainerBtnback.appendChild(restartButton);
   }
 
   showStep(quizData[0]);
